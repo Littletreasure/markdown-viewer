@@ -46,7 +46,7 @@ class App extends Component {
     const { text } = this.state;
     return (
       <div className="App">
-        <h1 id="header">Markdown Viewer</h1>
+        <h1 id="header">Markdown Previewer</h1>
         <div className="boxes">
           <Editor text={text} handleChange={this.handleChange} />
           <Preview text={text} />
