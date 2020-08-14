@@ -1,0 +1,67 @@
+$maincolor: #669999;
+$boxcolor: lighten($maincolor, 40%);
+$shadow: 1px 1px 10px 5px darken($maincolor, 30%);
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.border {
+  border: 1px solid black;
+}
+
+.App {
+  @extend .display;
+  background: $maincolor;
+  .boxes {
+    @extend .display;
+  }
+}
+
+#header {
+  font-family: sans-serif;
+  color: $boxcolor;
+}
+
+.editorDiv {
+  @extend .display;
+  width: 600px;
+  margin-bottom: 20px;
+  box-shadow: $shadow;
+
+  #editor {
+    @extend .border;
+    background: $boxcolor;
+    width: 99%;
+    padding: 10px;
+    min-height: 200px;
+    resize: vertical;
+    border-top: none;
+  }
+}
+
+.previewDiv {
+  @extend .display;
+  width: 800px;
+  margin-bottom: 20px;
+  box-shadow: $shadow;
+
+  #preview {
+    @extend .border;
+    background-color: $boxcolor;
+    width: 99%;
+    padding: 10px;
+    border-top: none;
+    img {
+      width: 100px;
+    }
+  }
+}
+
+#span {
+  @extend .border;
+  width: 99%;
+  padding: 5px 10px;
+  background: darken($boxcolor, 10%);
+}
